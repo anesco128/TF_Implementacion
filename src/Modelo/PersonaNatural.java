@@ -9,5 +9,6 @@ package Modelo;
  * @author anss8
  */
 public class PersonaNatural {
-    
+    private String numeroTelefonico;
+    private String correoElectronico;
 }

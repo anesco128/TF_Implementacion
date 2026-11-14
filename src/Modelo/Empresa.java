@@ -9,5 +9,5 @@ package Modelo;
  * @author anss8
  */
 public class Empresa {
-    
+    private Contacto suContacto;
 }

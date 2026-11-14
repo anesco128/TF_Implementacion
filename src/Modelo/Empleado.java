@@ -9,5 +9,8 @@ package Modelo;
  * @author anss8
  */
 public class Empleado {
-    
+    private String numeroIdentificacioni;
+    private String nombreCompleto;
+    private String tituloProfesional;
+    private byte aniosExperiencia;
 }

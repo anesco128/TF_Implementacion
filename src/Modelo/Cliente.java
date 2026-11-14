@@ -8,6 +8,9 @@ package Modelo;
  *
  * @author anss8
  */
-public class Cliente {
+public abstract class Cliente {
+    protected String numeroIdentificacion;
+    protected String nombre;
+    protected String nombreCiudad;
     
 }
