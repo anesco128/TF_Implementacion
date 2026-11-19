@@ -4,30 +4,32 @@
  */
 package Modelo;
 
+import java.io.Serializable;
+
 /**
  *
  * @author anss8
   */
-public class Empleado {
-    private String numeroIdentificacioni;
+public class Empleado implements Serializable {
+    private String numeroIdentificacion;
     private String nombreCompleto;
     private String tituloProfesional;
     private byte aniosExperiencia;
  
 
-    public Empleado(String numeroIdentificacioni, String nombreCompleto, String tituloProfesional, byte aniosExperiencia) {
-        this.numeroIdentificacioni = numeroIdentificacioni;
+    public Empleado(String numeroIdentificacion, String nombreCompleto, String tituloProfesional, byte aniosExperiencia) {
+        this.numeroIdentificacion = numeroIdentificacion;
         this.nombreCompleto = nombreCompleto;
         this.tituloProfesional = tituloProfesional;
         this.aniosExperiencia = aniosExperiencia;
     }
 
-    public String getNumeroIdentificacioni() {
-        return numeroIdentificacioni;
+    public String getNumeroIdentificacion() {
+        return numeroIdentificacion;
     }
 
-    public void setNumeroIdentificacioni(String numeroIdentificacioni) {
-        this.numeroIdentificacioni = numeroIdentificacioni;
+    public void setNumeroIdentificacion(String numeroIdentificacion) {
+        this.numeroIdentificacion = numeroIdentificacion;
     }
 
     public String getNombreCompleto() {
@@ -57,15 +59,11 @@ public class Empleado {
     @Override
     public String toString() {
         return "Empleado{" 
-                + "numeroIdentificacioni=" + numeroIdentificacioni 
+                + "numeroIdentificacion=" + numeroIdentificacion 
                 + ", nombreCompleto=" + nombreCompleto 
                 + ", tituloProfesional=" + tituloProfesional 
                 + ", aniosExperiencia=" + aniosExperiencia + '}';
     }
     
     
-}
-    public String getNumeroIdentificacion() {
-       return numeroIdentificacion;
-    }
 }
