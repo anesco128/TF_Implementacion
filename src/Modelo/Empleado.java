@@ -66,6 +66,8 @@ public class Empleado {
     
 }
     public String getNumeroIdentificacion() {
-       return numeroIdentificacion;
+        String numeroIdentificacion= " ";
+        
+        return numeroIdentificacion;
     }
 }
