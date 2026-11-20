@@ -55,46 +55,287 @@ public class UsaProyecto extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelSuperior = new javax.swing.JPanel();
-        lblOperacion = new javax.swing.JLabel();
-        cmbOperaciones = new javax.swing.JComboBox<>();
-        btnEjecutar = new javax.swing.JButton();
+        jPanelRegistro = new javax.swing.JPanel();
+        jLabelRegistro = new javax.swing.JLabel();
+        jButtonRegistrarProyecto = new javax.swing.JButton();
+        jButtonActualizarEstado = new javax.swing.JButton();
+        jButtonRegistrarIntegrante = new javax.swing.JButton();
+        jButtonRegistrarEquipo = new javax.swing.JButton();
+        jButtonEliminarIntegrante = new javax.swing.JButton();
+        jPanelArchivos = new javax.swing.JPanel();
+        jLabelArchivos = new javax.swing.JLabel();
+        jButtonGenerarProyectos = new javax.swing.JButton();
+        jButtonGenerarClientes = new javax.swing.JButton();
+        jButtonLeerProyectos = new javax.swing.JButton();
+        jButtonLeerClientes = new javax.swing.JButton();
+        jPanelConsultas = new javax.swing.JPanel();
+        jLabelConsultas = new javax.swing.JLabel();
+        jPanelBotonesConsulta = new javax.swing.JPanel();
+        jButtonConsultaTODO = new javax.swing.JButton();
+        jButtonConsultaEnCurso = new javax.swing.JButton();
+        jButtonConsultaPRIMERO = new javax.swing.JButton();
+        jButtonConsultaULTIMO = new javax.swing.JButton();
+        jButtonConsultaCodigo = new javax.swing.JButton();
+        jButtonConsultaGerente = new javax.swing.JButton();
+        jButtonConsultaEquipo = new javax.swing.JButton();
+        jButtonConsultaPorGerente = new javax.swing.JButton();
+        jButtonConsultaPorCliente = new javax.swing.JButton();
+        jButtonConsultaTipoCliente = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtResultado = new javax.swing.JTextArea();
+        jButtonSalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Gestión de Proyectos");
+        setTitle("GESTIÓN DE PROYECTOS");
 
-        lblOperacion.setText("Operación:");
-        panelSuperior.add(lblOperacion);
+        jPanelRegistro.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
-        cmbOperaciones.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1. Registrar un proyecto", "2. Consultar todos los proyectos", "3. Consultar los proyectos en curso", "4. Consultar el primer proyecto registrado", "5. Consultar el último proyecto registrado", "6. Consultar el gerente de un proyecto", "7. Consultar el equipo de un proyecto", "8. Consultar los proyectos de un gerente", "9. Consultar los proyectos de un cliente", "10. Registrar un integrante a un proyecto", "11. Registrar el equipo a un proyecto", "12. Eliminar un integrante de un proyecto", "13. Generar archivo de objetos de todos los proyectos", "14. Generar archivo de objetos de todos los clientes", "15. Leer archivo de objetos de todos los proyectos", "16. Leer archivo de objetos de todos los clientes", "17. Actualizar el estado de un proyecto", "18. Consultar los proyectos por tipo de cliente", "19. Consultar un proyecto por código" }));
-        panelSuperior.add(cmbOperaciones);
+        jLabelRegistro.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabelRegistro.setText("Registro de proyectos");
 
-        btnEjecutar.setText("Ejecutar");
-        btnEjecutar.addActionListener(this::btnEjecutarActionPerformed);
-        panelSuperior.add(btnEjecutar);
+        jButtonRegistrarProyecto.setBackground(new java.awt.Color(204, 255, 204));
+        jButtonRegistrarProyecto.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButtonRegistrarProyecto.setText("Registrar proyecto");
+        jButtonRegistrarProyecto.setToolTipText("1. Registrar un proyecto");
+        jButtonRegistrarProyecto.addActionListener(this::jButtonRegistrarProyectoActionPerformed);
 
-        getContentPane().add(panelSuperior, java.awt.BorderLayout.PAGE_START);
+        jButtonActualizarEstado.setBackground(new java.awt.Color(204, 255, 204));
+        jButtonActualizarEstado.setText("Actualizar estado");
+        jButtonActualizarEstado.setToolTipText("17. Actualizar el estado de un proyecto");
+        jButtonActualizarEstado.addActionListener(this::jButtonActualizarEstadoActionPerformed);
+
+        jButtonRegistrarIntegrante.setBackground(new java.awt.Color(204, 255, 204));
+        jButtonRegistrarIntegrante.setText("Registrar integrante");
+        jButtonRegistrarIntegrante.setToolTipText("10. Registrar un integrante a un proyecto");
+        jButtonRegistrarIntegrante.addActionListener(this::jButtonRegistrarIntegranteActionPerformed);
+
+        jButtonRegistrarEquipo.setBackground(new java.awt.Color(204, 255, 204));
+        jButtonRegistrarEquipo.setText("Registrar equipo");
+        jButtonRegistrarEquipo.setToolTipText("11. Registrar el equipo a un proyecto");
+        jButtonRegistrarEquipo.addActionListener(this::jButtonRegistrarEquipoActionPerformed);
+
+        jButtonEliminarIntegrante.setBackground(new java.awt.Color(204, 255, 204));
+        jButtonEliminarIntegrante.setText("Eliminar integrante");
+        jButtonEliminarIntegrante.setToolTipText("12. Eliminar un integrante de un proyecto");
+        jButtonEliminarIntegrante.addActionListener(this::jButtonEliminarIntegranteActionPerformed);
+
+        javax.swing.GroupLayout jPanelRegistroLayout = new javax.swing.GroupLayout(jPanelRegistro);
+        jPanelRegistro.setLayout(jPanelRegistroLayout);
+        jPanelRegistroLayout.setHorizontalGroup(
+            jPanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelRegistroLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabelRegistro)
+                        .addComponent(jButtonRegistrarProyecto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonActualizarEstado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonRegistrarIntegrante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonRegistrarEquipo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonEliminarIntegrante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addContainerGap())
+        );
+        jPanelRegistroLayout.setVerticalGroup(
+            jPanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelRegistroLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabelRegistro)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jButtonRegistrarProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jButtonActualizarEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jButtonRegistrarIntegrante, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jButtonRegistrarEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jButtonEliminarIntegrante, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanelArchivos.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabelArchivos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabelArchivos.setText("Archivo objetos");
+
+        jButtonGenerarProyectos.setText("Generar proyectos");
+        jButtonGenerarProyectos.setToolTipText("13. Generar archivo de objetos de todos los proyectos");
+        jButtonGenerarProyectos.addActionListener(this::jButtonGenerarProyectosActionPerformed);
+
+        jButtonGenerarClientes.setText("Generar clientes");
+        jButtonGenerarClientes.setToolTipText("14. Generar archivo de objetos de todos los clientes");
+        jButtonGenerarClientes.addActionListener(this::jButtonGenerarClientesActionPerformed);
+
+        jButtonLeerProyectos.setText("Leer proyectos");
+        jButtonLeerProyectos.setToolTipText("15. Leer archivo de objetos de todos los proyectos");
+        jButtonLeerProyectos.addActionListener(this::jButtonLeerProyectosActionPerformed);
+
+        jButtonLeerClientes.setText("Leer clientes");
+        jButtonLeerClientes.setToolTipText("16. Leer archivo de objetos de todos los clientes");
+        jButtonLeerClientes.addActionListener(this::jButtonLeerClientesActionPerformed);
+
+        javax.swing.GroupLayout jPanelArchivosLayout = new javax.swing.GroupLayout(jPanelArchivos);
+        jPanelArchivos.setLayout(jPanelArchivosLayout);
+        jPanelArchivosLayout.setHorizontalGroup(
+            jPanelArchivosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelArchivosLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanelArchivosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabelArchivos)
+                        .addComponent(jButtonGenerarProyectos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonGenerarClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonLeerProyectos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonLeerClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addContainerGap())
+        );
+        jPanelArchivosLayout.setVerticalGroup(
+            jPanelArchivosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelArchivosLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabelArchivos)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jButtonGenerarProyectos, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jButtonGenerarClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jButtonLeerProyectos, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jButtonLeerClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanelConsultas.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabelConsultas.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabelConsultas.setText("Consultas");
+
+        jPanelBotonesConsulta.setLayout(new java.awt.GridLayout(2, 5, 5, 5));
+
+        jButtonConsultaTODO.setBackground(new java.awt.Color(153, 204, 255));
+        jButtonConsultaTODO.setText("Todos");
+        jButtonConsultaTODO.setToolTipText("2. Consultar todos los proyectos");
+        jButtonConsultaTODO.addActionListener(this::jButtonConsultaTODOActionPerformed);
+        jButtonConsultaEnCurso.setBackground(new java.awt.Color(153, 204, 255));
+        jButtonConsultaEnCurso.setText("En curso");
+        jButtonConsultaEnCurso.setToolTipText("3. Consultar los proyectos en curso");
+        jButtonConsultaEnCurso.addActionListener(this::jButtonConsultaEnCursoActionPerformed);
+        jButtonConsultaPRIMERO.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonConsultaPRIMERO.setText("Primero");
+        jButtonConsultaPRIMERO.setToolTipText("4. Consultar el primer proyecto registrado");
+        jButtonConsultaPRIMERO.addActionListener(this::jButtonConsultaPRIMEROActionPerformed);
+        jButtonConsultaULTIMO.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonConsultaULTIMO.setText("Último");
+        jButtonConsultaULTIMO.setToolTipText("5. Consultar el último proyecto registrado");
+        jButtonConsultaULTIMO.addActionListener(this::jButtonConsultaULTIMOActionPerformed);
+        jButtonConsultaCodigo.setBackground(new java.awt.Color(204, 255, 255));
+        jButtonConsultaCodigo.setText("Por código");
+        jButtonConsultaCodigo.setToolTipText("19. Consultar un proyecto por código");
+        jButtonConsultaCodigo.addActionListener(this::jButtonConsultaCodigoActionPerformed);
+        jButtonConsultaGerente.setBackground(new java.awt.Color(204, 255, 255));
+        jButtonConsultaGerente.setText("Gerente del proyecto");
+        jButtonConsultaGerente.setToolTipText("6. Consultar el gerente de un proyecto");
+        jButtonConsultaGerente.addActionListener(this::jButtonConsultaGerenteActionPerformed);
+        jButtonConsultaEquipo.setBackground(new java.awt.Color(204, 255, 255));
+        jButtonConsultaEquipo.setText("Equipo del proyecto");
+        jButtonConsultaEquipo.setToolTipText("7. Consultar el equipo de un proyecto");
+        jButtonConsultaEquipo.addActionListener(this::jButtonConsultaEquipoActionPerformed);
+        jButtonConsultaPorGerente.setBackground(new java.awt.Color(204, 255, 255));
+        jButtonConsultaPorGerente.setText("Por gerente");
+        jButtonConsultaPorGerente.setToolTipText("8. Consultar los proyectos de un gerente");
+        jButtonConsultaPorGerente.addActionListener(this::jButtonConsultaPorGerenteActionPerformed);
+        jButtonConsultaPorCliente.setBackground(new java.awt.Color(204, 255, 255));
+        jButtonConsultaPorCliente.setText("Por cliente");
+        jButtonConsultaPorCliente.setToolTipText("9. Consultar los proyectos de un cliente");
+        jButtonConsultaPorCliente.addActionListener(this::jButtonConsultaPorClienteActionPerformed);
+        jButtonConsultaTipoCliente.setBackground(new java.awt.Color(204, 255, 255));
+        jButtonConsultaTipoCliente.setText("Por tipo de cliente");
+        jButtonConsultaTipoCliente.setToolTipText("18. Consultar los proyectos por tipo de cliente");
+        jButtonConsultaTipoCliente.addActionListener(this::jButtonConsultaTipoClienteActionPerformed);
+
+        jPanelBotonesConsulta.add(jButtonConsultaTODO);
+        jPanelBotonesConsulta.add(jButtonConsultaEnCurso);
+        jPanelBotonesConsulta.add(jButtonConsultaPRIMERO);
+        jPanelBotonesConsulta.add(jButtonConsultaULTIMO);
+        jPanelBotonesConsulta.add(jButtonConsultaCodigo);
+        jPanelBotonesConsulta.add(jButtonConsultaGerente);
+        jPanelBotonesConsulta.add(jButtonConsultaEquipo);
+        jPanelBotonesConsulta.add(jButtonConsultaPorGerente);
+        jPanelBotonesConsulta.add(jButtonConsultaPorCliente);
+        jPanelBotonesConsulta.add(jButtonConsultaTipoCliente);
 
         txtResultado.setEditable(false);
         txtResultado.setColumns(70);
         txtResultado.setLineWrap(true);
-        txtResultado.setRows(25);
+        txtResultado.setRows(12);
         txtResultado.setWrapStyleWord(true);
         jScrollPane1.setViewportView(txtResultado);
 
-        getContentPane().add(jScrollPane1, java.awt.BorderLayout.CENTER);
+        javax.swing.GroupLayout jPanelConsultasLayout = new javax.swing.GroupLayout(jPanelConsultas);
+        jPanelConsultas.setLayout(jPanelConsultasLayout);
+        jPanelConsultasLayout.setHorizontalGroup(
+            jPanelConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelConsultasLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanelConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabelConsultas)
+                        .addComponent(jPanelBotonesConsulta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addContainerGap())
+        );
+        jPanelConsultasLayout.setVerticalGroup(
+            jPanelConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelConsultasLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabelConsultas)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jPanelBotonesConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap())
+        );
+
+        jButtonSalir.setBackground(new java.awt.Color(255, 102, 102));
+        jButtonSalir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButtonSalir.setText("Salir");
+        jButtonSalir.addActionListener(this::jButtonSalirActionPerformed);
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jPanelRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGap(18, 18, 18)
+                            .addComponent(jPanelArchivos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jPanelConsultas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonSalir, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addContainerGap())
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jPanelRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanelArchivos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jPanelConsultas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jButtonSalir)
+                    .addContainerGap())
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     /**
-     * Botón Ejecutar: lee la operación elegida en el combo y llama al método
-     * correspondiente. El resultado se muestra en el área de texto.
+     * Ejecuta la operación indicada (1 a 19) y muestra el resultado en el área
+     * de texto. Cada botón de la ventana llama a este método con el número de
+     * su operación.
      */
-    private void btnEjecutarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEjecutarActionPerformed
-        int laOpcion = cmbOperaciones.getSelectedIndex() + 1; // el índice del combo empieza en 0
+    private void ejecutarOperacion(int laOpcion) {
         String res = "";
         try {
             switch (laOpcion) {
@@ -172,7 +413,88 @@ public class UsaProyecto extends javax.swing.JFrame {
         }
         txtResultado.setText(res);
         txtResultado.setCaretPosition(0); // muestra el resultado desde el inicio
-    }//GEN-LAST:event_btnEjecutarActionPerformed
+    }
+
+    private void jButtonRegistrarProyectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarProyectoActionPerformed
+        ejecutarOperacion(1);
+    }//GEN-LAST:event_jButtonRegistrarProyectoActionPerformed
+
+    private void jButtonActualizarEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActualizarEstadoActionPerformed
+        ejecutarOperacion(17);
+    }//GEN-LAST:event_jButtonActualizarEstadoActionPerformed
+
+    private void jButtonRegistrarIntegranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarIntegranteActionPerformed
+        ejecutarOperacion(10);
+    }//GEN-LAST:event_jButtonRegistrarIntegranteActionPerformed
+
+    private void jButtonRegistrarEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarEquipoActionPerformed
+        ejecutarOperacion(11);
+    }//GEN-LAST:event_jButtonRegistrarEquipoActionPerformed
+
+    private void jButtonEliminarIntegranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarIntegranteActionPerformed
+        ejecutarOperacion(12);
+    }//GEN-LAST:event_jButtonEliminarIntegranteActionPerformed
+
+    private void jButtonGenerarProyectosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGenerarProyectosActionPerformed
+        ejecutarOperacion(13);
+    }//GEN-LAST:event_jButtonGenerarProyectosActionPerformed
+
+    private void jButtonGenerarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGenerarClientesActionPerformed
+        ejecutarOperacion(14);
+    }//GEN-LAST:event_jButtonGenerarClientesActionPerformed
+
+    private void jButtonLeerProyectosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLeerProyectosActionPerformed
+        ejecutarOperacion(15);
+    }//GEN-LAST:event_jButtonLeerProyectosActionPerformed
+
+    private void jButtonLeerClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLeerClientesActionPerformed
+        ejecutarOperacion(16);
+    }//GEN-LAST:event_jButtonLeerClientesActionPerformed
+
+    private void jButtonConsultaTODOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultaTODOActionPerformed
+        ejecutarOperacion(2);
+    }//GEN-LAST:event_jButtonConsultaTODOActionPerformed
+
+    private void jButtonConsultaEnCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultaEnCursoActionPerformed
+        ejecutarOperacion(3);
+    }//GEN-LAST:event_jButtonConsultaEnCursoActionPerformed
+
+    private void jButtonConsultaPRIMEROActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultaPRIMEROActionPerformed
+        ejecutarOperacion(4);
+    }//GEN-LAST:event_jButtonConsultaPRIMEROActionPerformed
+
+    private void jButtonConsultaULTIMOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultaULTIMOActionPerformed
+        ejecutarOperacion(5);
+    }//GEN-LAST:event_jButtonConsultaULTIMOActionPerformed
+
+    private void jButtonConsultaCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultaCodigoActionPerformed
+        ejecutarOperacion(19);
+    }//GEN-LAST:event_jButtonConsultaCodigoActionPerformed
+
+    private void jButtonConsultaGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultaGerenteActionPerformed
+        ejecutarOperacion(6);
+    }//GEN-LAST:event_jButtonConsultaGerenteActionPerformed
+
+    private void jButtonConsultaEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultaEquipoActionPerformed
+        ejecutarOperacion(7);
+    }//GEN-LAST:event_jButtonConsultaEquipoActionPerformed
+
+    private void jButtonConsultaPorGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultaPorGerenteActionPerformed
+        ejecutarOperacion(8);
+    }//GEN-LAST:event_jButtonConsultaPorGerenteActionPerformed
+
+    private void jButtonConsultaPorClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultaPorClienteActionPerformed
+        ejecutarOperacion(9);
+    }//GEN-LAST:event_jButtonConsultaPorClienteActionPerformed
+
+    private void jButtonConsultaTipoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultaTipoClienteActionPerformed
+        ejecutarOperacion(18);
+    }//GEN-LAST:event_jButtonConsultaTipoClienteActionPerformed
+
+    private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
+        JOptionPane.showMessageDialog(this, "El programa se cerrará, gracias por utilizar nuestros servicios.");
+        System.exit(0);
+    }//GEN-LAST:event_jButtonSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -754,11 +1076,34 @@ public class UsaProyecto extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnEjecutar;
-    private javax.swing.JComboBox<String> cmbOperaciones;
+    private javax.swing.JButton jButtonActualizarEstado;
+    private javax.swing.JButton jButtonConsultaCodigo;
+    private javax.swing.JButton jButtonConsultaEnCurso;
+    private javax.swing.JButton jButtonConsultaEquipo;
+    private javax.swing.JButton jButtonConsultaGerente;
+    private javax.swing.JButton jButtonConsultaPorCliente;
+    private javax.swing.JButton jButtonConsultaPorGerente;
+    private javax.swing.JButton jButtonConsultaPRIMERO;
+    private javax.swing.JButton jButtonConsultaTipoCliente;
+    private javax.swing.JButton jButtonConsultaTODO;
+    private javax.swing.JButton jButtonConsultaULTIMO;
+    private javax.swing.JButton jButtonEliminarIntegrante;
+    private javax.swing.JButton jButtonGenerarClientes;
+    private javax.swing.JButton jButtonGenerarProyectos;
+    private javax.swing.JButton jButtonLeerClientes;
+    private javax.swing.JButton jButtonLeerProyectos;
+    private javax.swing.JButton jButtonRegistrarEquipo;
+    private javax.swing.JButton jButtonRegistrarIntegrante;
+    private javax.swing.JButton jButtonRegistrarProyecto;
+    private javax.swing.JButton jButtonSalir;
+    private javax.swing.JLabel jLabelArchivos;
+    private javax.swing.JLabel jLabelConsultas;
+    private javax.swing.JLabel jLabelRegistro;
+    private javax.swing.JPanel jPanelArchivos;
+    private javax.swing.JPanel jPanelBotonesConsulta;
+    private javax.swing.JPanel jPanelConsultas;
+    private javax.swing.JPanel jPanelRegistro;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lblOperacion;
-    private javax.swing.JPanel panelSuperior;
     private javax.swing.JTextArea txtResultado;
     // End of variables declaration//GEN-END:variables
 }
