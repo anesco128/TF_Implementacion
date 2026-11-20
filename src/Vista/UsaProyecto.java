@@ -2,6 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+package Vista;
+
 import Modelo.Cliente;
 import Modelo.Contacto;
 import Modelo.Empleado;
@@ -23,16 +25,25 @@ import javax.swing.JOptionPane;
  * @author jp
  */
 public class UsaProyecto extends javax.swing.JFrame {
-    
+
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(UsaProyecto.class.getName());
-        private static ArrayList<Proyecto> losProyectos = new ArrayList<>();
-        private static ArrayList<Cliente> losClientes = new ArrayList<>();
+    private static ArrayList<Proyecto> losProyectos = new ArrayList<>();
+    private static ArrayList<Cliente> losClientes = new ArrayList<>();
+
+    /**
+     * Se lanza cuando el usuario cierra o cancela un cuadro de diálogo de
+     * captura de datos. Permite abortar la operación sin que el programa se
+     * caiga.
+     */
+    private static class Cancelado extends RuntimeException {
+    }
 
     /**
      * Creates new form UsaProyecto
      */
     public UsaProyecto() {
         initComponents();
+        setLocationRelativeTo(null); // centra la ventana en la pantalla
     }
 
     /**
@@ -44,21 +55,454 @@ public class UsaProyecto extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanelRegistro = new javax.swing.JPanel();
+        jLabelRegistro = new javax.swing.JLabel();
+        jButtonRegistrarProyecto = new javax.swing.JButton();
+        jButtonActualizarEstado = new javax.swing.JButton();
+        jButtonRegistrarIntegrante = new javax.swing.JButton();
+        jButtonRegistrarEquipo = new javax.swing.JButton();
+        jButtonEliminarIntegrante = new javax.swing.JButton();
+        jPanelArchivos = new javax.swing.JPanel();
+        jLabelArchivos = new javax.swing.JLabel();
+        jButtonGenerarProyectos = new javax.swing.JButton();
+        jButtonGenerarClientes = new javax.swing.JButton();
+        jButtonLeerProyectos = new javax.swing.JButton();
+        jButtonLeerClientes = new javax.swing.JButton();
+        jPanelConsultas = new javax.swing.JPanel();
+        jLabelConsultas = new javax.swing.JLabel();
+        jPanelBotonesConsulta = new javax.swing.JPanel();
+        jButtonConsultaTODO = new javax.swing.JButton();
+        jButtonConsultaEnCurso = new javax.swing.JButton();
+        jButtonConsultaPRIMERO = new javax.swing.JButton();
+        jButtonConsultaULTIMO = new javax.swing.JButton();
+        jButtonConsultaCodigo = new javax.swing.JButton();
+        jButtonConsultaGerente = new javax.swing.JButton();
+        jButtonConsultaEquipo = new javax.swing.JButton();
+        jButtonConsultaPorGerente = new javax.swing.JButton();
+        jButtonConsultaPorCliente = new javax.swing.JButton();
+        jButtonConsultaTipoCliente = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtResultado = new javax.swing.JTextArea();
+        jButtonSalir = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("GESTIÓN DE PROYECTOS");
+
+        jPanelRegistro.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabelRegistro.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabelRegistro.setText("Registro de proyectos");
+
+        jButtonRegistrarProyecto.setBackground(new java.awt.Color(204, 255, 204));
+        jButtonRegistrarProyecto.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButtonRegistrarProyecto.setText("Registrar proyecto");
+        jButtonRegistrarProyecto.setToolTipText("1. Registrar un proyecto");
+        jButtonRegistrarProyecto.addActionListener(this::jButtonRegistrarProyectoActionPerformed);
+
+        jButtonActualizarEstado.setBackground(new java.awt.Color(204, 255, 204));
+        jButtonActualizarEstado.setText("Actualizar estado");
+        jButtonActualizarEstado.setToolTipText("17. Actualizar el estado de un proyecto");
+        jButtonActualizarEstado.addActionListener(this::jButtonActualizarEstadoActionPerformed);
+
+        jButtonRegistrarIntegrante.setBackground(new java.awt.Color(204, 255, 204));
+        jButtonRegistrarIntegrante.setText("Registrar integrante");
+        jButtonRegistrarIntegrante.setToolTipText("10. Registrar un integrante a un proyecto");
+        jButtonRegistrarIntegrante.addActionListener(this::jButtonRegistrarIntegranteActionPerformed);
+
+        jButtonRegistrarEquipo.setBackground(new java.awt.Color(204, 255, 204));
+        jButtonRegistrarEquipo.setText("Registrar equipo");
+        jButtonRegistrarEquipo.setToolTipText("11. Registrar el equipo a un proyecto");
+        jButtonRegistrarEquipo.addActionListener(this::jButtonRegistrarEquipoActionPerformed);
+
+        jButtonEliminarIntegrante.setBackground(new java.awt.Color(204, 255, 204));
+        jButtonEliminarIntegrante.setText("Eliminar integrante");
+        jButtonEliminarIntegrante.setToolTipText("12. Eliminar un integrante de un proyecto");
+        jButtonEliminarIntegrante.addActionListener(this::jButtonEliminarIntegranteActionPerformed);
+
+        javax.swing.GroupLayout jPanelRegistroLayout = new javax.swing.GroupLayout(jPanelRegistro);
+        jPanelRegistro.setLayout(jPanelRegistroLayout);
+        jPanelRegistroLayout.setHorizontalGroup(
+            jPanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelRegistroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelRegistro)
+                    .addComponent(jButtonRegistrarProyecto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonActualizarEstado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonRegistrarIntegrante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonRegistrarEquipo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonEliminarIntegrante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanelRegistroLayout.setVerticalGroup(
+            jPanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelRegistroLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelRegistro)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonRegistrarProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonActualizarEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonRegistrarIntegrante, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonRegistrarEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonEliminarIntegrante, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanelArchivos.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabelArchivos.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabelArchivos.setText("Archivo objetos");
+
+        jButtonGenerarProyectos.setText("Generar proyectos");
+        jButtonGenerarProyectos.setToolTipText("13. Generar archivo de objetos de todos los proyectos");
+        jButtonGenerarProyectos.addActionListener(this::jButtonGenerarProyectosActionPerformed);
+
+        jButtonGenerarClientes.setText("Generar clientes");
+        jButtonGenerarClientes.setToolTipText("14. Generar archivo de objetos de todos los clientes");
+        jButtonGenerarClientes.addActionListener(this::jButtonGenerarClientesActionPerformed);
+
+        jButtonLeerProyectos.setText("Leer proyectos");
+        jButtonLeerProyectos.setToolTipText("15. Leer archivo de objetos de todos los proyectos");
+        jButtonLeerProyectos.addActionListener(this::jButtonLeerProyectosActionPerformed);
+
+        jButtonLeerClientes.setText("Leer clientes");
+        jButtonLeerClientes.setToolTipText("16. Leer archivo de objetos de todos los clientes");
+        jButtonLeerClientes.addActionListener(this::jButtonLeerClientesActionPerformed);
+
+        javax.swing.GroupLayout jPanelArchivosLayout = new javax.swing.GroupLayout(jPanelArchivos);
+        jPanelArchivos.setLayout(jPanelArchivosLayout);
+        jPanelArchivosLayout.setHorizontalGroup(
+            jPanelArchivosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelArchivosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelArchivosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelArchivos)
+                    .addComponent(jButtonGenerarProyectos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonGenerarClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonLeerProyectos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonLeerClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanelArchivosLayout.setVerticalGroup(
+            jPanelArchivosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelArchivosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelArchivos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonGenerarProyectos, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonGenerarClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonLeerProyectos, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonLeerClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanelConsultas.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabelConsultas.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabelConsultas.setText("Consultas");
+
+        jPanelBotonesConsulta.setLayout(new java.awt.GridLayout(2, 5, 5, 5));
+
+        jButtonConsultaTODO.setBackground(new java.awt.Color(153, 204, 255));
+        jButtonConsultaTODO.setText("Todos");
+        jButtonConsultaTODO.setToolTipText("2. Consultar todos los proyectos");
+        jButtonConsultaTODO.addActionListener(this::jButtonConsultaTODOActionPerformed);
+        jPanelBotonesConsulta.add(jButtonConsultaTODO);
+
+        jButtonConsultaEnCurso.setBackground(new java.awt.Color(153, 204, 255));
+        jButtonConsultaEnCurso.setText("En curso");
+        jButtonConsultaEnCurso.setToolTipText("3. Consultar los proyectos en curso");
+        jButtonConsultaEnCurso.addActionListener(this::jButtonConsultaEnCursoActionPerformed);
+        jPanelBotonesConsulta.add(jButtonConsultaEnCurso);
+
+        jButtonConsultaPRIMERO.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonConsultaPRIMERO.setText("Primero");
+        jButtonConsultaPRIMERO.setToolTipText("4. Consultar el primer proyecto registrado");
+        jButtonConsultaPRIMERO.addActionListener(this::jButtonConsultaPRIMEROActionPerformed);
+        jPanelBotonesConsulta.add(jButtonConsultaPRIMERO);
+
+        jButtonConsultaULTIMO.setBackground(new java.awt.Color(0, 204, 204));
+        jButtonConsultaULTIMO.setText("Último");
+        jButtonConsultaULTIMO.setToolTipText("5. Consultar el último proyecto registrado");
+        jButtonConsultaULTIMO.addActionListener(this::jButtonConsultaULTIMOActionPerformed);
+        jPanelBotonesConsulta.add(jButtonConsultaULTIMO);
+
+        jButtonConsultaCodigo.setBackground(new java.awt.Color(204, 255, 255));
+        jButtonConsultaCodigo.setText("Por código");
+        jButtonConsultaCodigo.setToolTipText("19. Consultar un proyecto por código");
+        jButtonConsultaCodigo.addActionListener(this::jButtonConsultaCodigoActionPerformed);
+        jPanelBotonesConsulta.add(jButtonConsultaCodigo);
+
+        jButtonConsultaGerente.setBackground(new java.awt.Color(204, 255, 255));
+        jButtonConsultaGerente.setText("Gerente del proyecto");
+        jButtonConsultaGerente.setToolTipText("6. Consultar el gerente de un proyecto");
+        jButtonConsultaGerente.addActionListener(this::jButtonConsultaGerenteActionPerformed);
+        jPanelBotonesConsulta.add(jButtonConsultaGerente);
+
+        jButtonConsultaEquipo.setBackground(new java.awt.Color(204, 255, 255));
+        jButtonConsultaEquipo.setText("Equipo del proyecto");
+        jButtonConsultaEquipo.setToolTipText("7. Consultar el equipo de un proyecto");
+        jButtonConsultaEquipo.addActionListener(this::jButtonConsultaEquipoActionPerformed);
+        jPanelBotonesConsulta.add(jButtonConsultaEquipo);
+
+        jButtonConsultaPorGerente.setBackground(new java.awt.Color(204, 255, 255));
+        jButtonConsultaPorGerente.setText("Por gerente");
+        jButtonConsultaPorGerente.setToolTipText("8. Consultar los proyectos de un gerente");
+        jButtonConsultaPorGerente.addActionListener(this::jButtonConsultaPorGerenteActionPerformed);
+        jPanelBotonesConsulta.add(jButtonConsultaPorGerente);
+
+        jButtonConsultaPorCliente.setBackground(new java.awt.Color(204, 255, 255));
+        jButtonConsultaPorCliente.setText("Por cliente");
+        jButtonConsultaPorCliente.setToolTipText("9. Consultar los proyectos de un cliente");
+        jButtonConsultaPorCliente.addActionListener(this::jButtonConsultaPorClienteActionPerformed);
+        jPanelBotonesConsulta.add(jButtonConsultaPorCliente);
+
+        jButtonConsultaTipoCliente.setBackground(new java.awt.Color(204, 255, 255));
+        jButtonConsultaTipoCliente.setText("Por tipo de cliente");
+        jButtonConsultaTipoCliente.setToolTipText("18. Consultar los proyectos por tipo de cliente");
+        jButtonConsultaTipoCliente.addActionListener(this::jButtonConsultaTipoClienteActionPerformed);
+        jPanelBotonesConsulta.add(jButtonConsultaTipoCliente);
+
+        txtResultado.setEditable(false);
+        txtResultado.setColumns(70);
+        txtResultado.setLineWrap(true);
+        txtResultado.setRows(12);
+        txtResultado.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(txtResultado);
+
+        javax.swing.GroupLayout jPanelConsultasLayout = new javax.swing.GroupLayout(jPanelConsultas);
+        jPanelConsultas.setLayout(jPanelConsultasLayout);
+        jPanelConsultasLayout.setHorizontalGroup(
+            jPanelConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelConsultasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanelConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabelConsultas)
+                    .addComponent(jPanelBotonesConsulta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1))
+                .addContainerGap())
+        );
+        jPanelConsultasLayout.setVerticalGroup(
+            jPanelConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelConsultasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabelConsultas)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanelBotonesConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1)
+                .addContainerGap())
+        );
+
+        jButtonSalir.setBackground(new java.awt.Color(255, 102, 102));
+        jButtonSalir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButtonSalir.setText("Salir");
+        jButtonSalir.addActionListener(this::jButtonSalirActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanelRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanelArchivos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jPanelConsultas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonSalir, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanelRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanelArchivos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanelConsultas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButtonSalir)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    /**
+     * Ejecuta la operación indicada (1 a 19) y muestra el resultado en el área
+     * de texto. Cada botón de la ventana llama a este método con el número de
+     * su operación.
+     */
+    private void ejecutarOperacion(int laOpcion) {
+        String res = "";
+        try {
+            switch (laOpcion) {
+                case 1:
+                    losProyectos = registrarProyecto(losProyectos);
+                    res = "Proyecto registrado correctamente.\n"
+                            + "Código asignado: " + losProyectos.get(losProyectos.size() - 1).getCodigo();
+                    break;
+                case 2:
+                    res = consultarTodosProyectos(losProyectos);
+                    break;
+                case 3:
+                    res = consultarProyectosEnCurso(losProyectos);
+                    break;
+                case 4:
+                    res = consultarPrimerProyecto(losProyectos);
+                    break;
+                case 5:
+                    res = consultarUltimoProyecto(losProyectos);
+                    break;
+                case 6:
+                    res = consultarGerenteProyectoDadoCodigo(losProyectos, leer("Código del proyecto:"));
+                    break;
+                case 7:
+                    res = consultarEquipoProyectoDadoCodigo(losProyectos, leer("Código del proyecto:"));
+                    break;
+                case 8:
+                    res = consultarProyectosDadoNumIDEGerente(losProyectos, leer("Número de identificación del gerente:"));
+                    break;
+                case 9:
+                    res = consultarProyectosDadoNumIDECliente(losProyectos, leer("Número de identificación del cliente:"));
+                    break;
+                case 10:
+                    res = registrarIntegranteProyectoDadoCodigo(losProyectos, leer("Código del proyecto:"));
+                    break;
+                case 11:
+                    res = registrarEquipoProyectoDadoCodigo(losProyectos, leer("Código del proyecto:"));
+                    break;
+                case 12:
+                    res = eliminarIntegranteProyectoDadoCodigo(losProyectos, leer("Código del proyecto:"));
+                    break;
+                case 13:
+                    generarArchivoDeObjetosProyectos(losProyectos);
+                    break;
+                case 14:
+                    generarArchivoDeObjetosClientes(losProyectos);
+                    break;
+                case 15:
+                    losProyectos = leerArchivoDeObjetosProyectos();
+                    res = consultarTodosProyectos(losProyectos);
+                    break;
+                case 16:
+                    losClientes = leerArchivoDeObjetosClientes();
+                    if (losClientes.isEmpty()) {
+                        res = "No se leyeron clientes.";
+                    } else {
+                        res = "Los clientes leídos del archivo son:\n";
+                        for (Cliente c : losClientes) {
+                            res += c.toString() + "\n";
+                        }
+                    }
+                    break;
+                case 17:
+                    res = actualizarEstadoProyectoDadoCodigo(losProyectos, leer("Código del proyecto:"));
+                    break;
+                case 18:
+                    res = consultarProyectosDadoTipoCliente(losProyectos, leer("Tipo de cliente (Empresa o PersonaNatural):"));
+                    break;
+                case 19:
+                    res = consultarProyectoDadoCodigo(losProyectos, leer("Código del proyecto:"));
+                    break;
+            }
+        } catch (Cancelado e) {
+            res = "Operación cancelada.";
+        }
+        txtResultado.setText(res);
+        txtResultado.setCaretPosition(0); // muestra el resultado desde el inicio
+    }
+
+    private void jButtonRegistrarProyectoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarProyectoActionPerformed
+        ejecutarOperacion(1);
+    }//GEN-LAST:event_jButtonRegistrarProyectoActionPerformed
+
+    private void jButtonActualizarEstadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonActualizarEstadoActionPerformed
+        ejecutarOperacion(17);
+    }//GEN-LAST:event_jButtonActualizarEstadoActionPerformed
+
+    private void jButtonRegistrarIntegranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarIntegranteActionPerformed
+        ejecutarOperacion(10);
+    }//GEN-LAST:event_jButtonRegistrarIntegranteActionPerformed
+
+    private void jButtonRegistrarEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarEquipoActionPerformed
+        ejecutarOperacion(11);
+    }//GEN-LAST:event_jButtonRegistrarEquipoActionPerformed
+
+    private void jButtonEliminarIntegranteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarIntegranteActionPerformed
+        ejecutarOperacion(12);
+    }//GEN-LAST:event_jButtonEliminarIntegranteActionPerformed
+
+    private void jButtonGenerarProyectosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGenerarProyectosActionPerformed
+        ejecutarOperacion(13);
+    }//GEN-LAST:event_jButtonGenerarProyectosActionPerformed
+
+    private void jButtonGenerarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGenerarClientesActionPerformed
+        ejecutarOperacion(14);
+    }//GEN-LAST:event_jButtonGenerarClientesActionPerformed
+
+    private void jButtonLeerProyectosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLeerProyectosActionPerformed
+        ejecutarOperacion(15);
+    }//GEN-LAST:event_jButtonLeerProyectosActionPerformed
+
+    private void jButtonLeerClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLeerClientesActionPerformed
+        ejecutarOperacion(16);
+    }//GEN-LAST:event_jButtonLeerClientesActionPerformed
+
+    private void jButtonConsultaTODOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultaTODOActionPerformed
+        ejecutarOperacion(2);
+    }//GEN-LAST:event_jButtonConsultaTODOActionPerformed
+
+    private void jButtonConsultaEnCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultaEnCursoActionPerformed
+        ejecutarOperacion(3);
+    }//GEN-LAST:event_jButtonConsultaEnCursoActionPerformed
+
+    private void jButtonConsultaPRIMEROActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultaPRIMEROActionPerformed
+        ejecutarOperacion(4);
+    }//GEN-LAST:event_jButtonConsultaPRIMEROActionPerformed
+
+    private void jButtonConsultaULTIMOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultaULTIMOActionPerformed
+        ejecutarOperacion(5);
+    }//GEN-LAST:event_jButtonConsultaULTIMOActionPerformed
+
+    private void jButtonConsultaCodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultaCodigoActionPerformed
+        ejecutarOperacion(19);
+    }//GEN-LAST:event_jButtonConsultaCodigoActionPerformed
+
+    private void jButtonConsultaGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultaGerenteActionPerformed
+        ejecutarOperacion(6);
+    }//GEN-LAST:event_jButtonConsultaGerenteActionPerformed
+
+    private void jButtonConsultaEquipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultaEquipoActionPerformed
+        ejecutarOperacion(7);
+    }//GEN-LAST:event_jButtonConsultaEquipoActionPerformed
+
+    private void jButtonConsultaPorGerenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultaPorGerenteActionPerformed
+        ejecutarOperacion(8);
+    }//GEN-LAST:event_jButtonConsultaPorGerenteActionPerformed
+
+    private void jButtonConsultaPorClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultaPorClienteActionPerformed
+        ejecutarOperacion(9);
+    }//GEN-LAST:event_jButtonConsultaPorClienteActionPerformed
+
+    private void jButtonConsultaTipoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultaTipoClienteActionPerformed
+        ejecutarOperacion(18);
+    }//GEN-LAST:event_jButtonConsultaTipoClienteActionPerformed
+
+    private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
+        JOptionPane.showMessageDialog(this, "El programa se cerrará, gracias por utilizar nuestros servicios.");
+        System.exit(0);
+    }//GEN-LAST:event_jButtonSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -84,7 +528,26 @@ public class UsaProyecto extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new UsaProyecto().setVisible(true));
     }
-    
+
+    // MÉTODO AUXILIAR PARA CAPTURAR DATOS
+
+    /**
+     * Muestra un cuadro de diálogo y devuelve el texto escrito (sin espacios
+     * sobrantes). Repite la pregunta si se deja vacío. Si el usuario cancela,
+     * lanza Cancelado para abortar la operación.
+     */
+    private String leer(String mensaje) {
+        String texto = "";
+        while (texto.isEmpty()) {
+            texto = JOptionPane.showInputDialog(this, mensaje);
+            if (texto == null) {
+                throw new Cancelado();
+            }
+            texto = texto.trim();
+        }
+        return texto;
+    }
+
     public String generarCodigoProyecto(ArrayList<Proyecto> datos) {
         String res;
         int elAnio = LocalDate.now().getYear();
@@ -108,10 +571,20 @@ public class UsaProyecto extends javax.swing.JFrame {
      * y registrarEquipo para no repetir la lectura de datos.)
      */
     private Empleado solicitarEmpleado() {
-        String elNumIde = JOptionPane.showInputDialog("Número de identificación del empleado:").trim();
-        String elNombre = JOptionPane.showInputDialog("Nombre completo del empleado:").trim();
-        String elTitulo = JOptionPane.showInputDialog("Título profesional del empleado:").trim();
-        byte losAnios = Byte.parseByte(JOptionPane.showInputDialog("Años de experiencia:").trim());
+        String elNumIde = leer("Número de identificación del empleado:");
+        String elNombre = leer("Nombre completo del empleado:");
+        String elTitulo = leer("Título profesional del empleado:");
+        byte losAnios = -1;
+        while (losAnios < 0) {
+            try {
+                losAnios = Byte.parseByte(leer("Años de experiencia:"));
+            } catch (NumberFormatException e) {
+                losAnios = -1;
+            }
+            if (losAnios < 0) {
+                JOptionPane.showMessageDialog(this, "Escriba un número entero entre 0 y 127.");
+            }
+        }
         return new Empleado(elNumIde, elNombre, elTitulo, losAnios);
     }
 
@@ -121,23 +594,26 @@ public class UsaProyecto extends javax.swing.JFrame {
         // título: entre 20 y 100 caracteres
         String elTitulo;
         do {
-            elTitulo = JOptionPane.showInputDialog("Título del proyecto (entre 20 y 100 caracteres):").trim();
+            elTitulo = leer("Título del proyecto (entre 20 y 100 caracteres):");
+            if (elTitulo.length() < 20 || elTitulo.length() > 100) {
+                JOptionPane.showMessageDialog(this, "El título debe tener entre 20 y 100 caracteres.");
+            }
         } while (elTitulo.length() < 20 || elTitulo.length() > 100);
 
         // fecha de inicio: aaaa-mm-dd
         LocalDate laFechaInicio = null;
         while (laFechaInicio == null) {
             try {
-                laFechaInicio = LocalDate.parse(JOptionPane.showInputDialog("Fecha de inicio (aaaa-mm-dd):").trim());
+                laFechaInicio = LocalDate.parse(leer("Fecha de inicio (aaaa-mm-dd):"));
             } catch (DateTimeParseException e) {
-                JOptionPane.showMessageDialog(null, "Fecha no válida. Use el formato aaaa-mm-dd");
+                JOptionPane.showMessageDialog(this, "Fecha no válida. Use el formato aaaa-mm-dd");
             }
         }
 
         // unidad de duración: semanas, meses, años
         String laUnidad;
         do {
-            laUnidad = JOptionPane.showInputDialog("Unidad de duración (semanas, meses, años):").trim().toLowerCase();
+            laUnidad = leer("Unidad de duración (semanas, meses, años):").toLowerCase();
         } while (!laUnidad.equals("semanas") && !laUnidad.equals("meses") && !laUnidad.equals("años"));
 
         // duración estimada: semanas 1-3, meses 1-11/13-23/25-35, años 1-3
@@ -145,7 +621,7 @@ public class UsaProyecto extends javax.swing.JFrame {
         boolean duracionValida = false;
         while (!duracionValida) {
             try {
-                laDuracion = Byte.parseByte(JOptionPane.showInputDialog("Duración estimada (en " + laUnidad + "):").trim());
+                laDuracion = Byte.parseByte(leer("Duración estimada (en " + laUnidad + "):"));
             } catch (NumberFormatException e) {
                 laDuracion = 0;
             }
@@ -157,16 +633,16 @@ public class UsaProyecto extends javax.swing.JFrame {
                 duracionValida = laDuracion >= 1 && laDuracion <= 3;
             }
             if (!duracionValida) {
-                JOptionPane.showMessageDialog(null, "Duración no válida para la unidad " + laUnidad);
+                JOptionPane.showMessageDialog(this, "Duración no válida para la unidad " + laUnidad);
             }
         }
 
         // cliente: si ya existe en algún proyecto se reutiliza (un cliente puede tener varios proyectos)
         String elTipo;
         do {
-            elTipo = JOptionPane.showInputDialog("Tipo de cliente (Empresa o PersonaNatural):").trim();
+            elTipo = leer("Tipo de cliente (Empresa o PersonaNatural):");
         } while (!elTipo.equalsIgnoreCase("Empresa") && !elTipo.equalsIgnoreCase("PersonaNatural"));
-        String elNumIdeCliente = JOptionPane.showInputDialog("Número de identificación del cliente:").trim();
+        String elNumIdeCliente = leer("Número de identificación del cliente:");
 
         Cliente elCliente = null;
         for (Proyecto p : datos) {
@@ -175,19 +651,21 @@ public class UsaProyecto extends javax.swing.JFrame {
             }
         }
         if (elCliente == null) {
-            String elNombreCliente = JOptionPane.showInputDialog("Nombre del cliente:").trim();
-            String laCiudad = JOptionPane.showInputDialog("Ciudad del cliente:").trim();
+            String elNombreCliente = leer("Nombre del cliente:");
+            String laCiudad = leer("Ciudad del cliente:");
             if (elTipo.equalsIgnoreCase("Empresa")) {
-                String elNombreContacto = JOptionPane.showInputDialog("Nombre completo del contacto:").trim();
-                String elCargo = JOptionPane.showInputDialog("Cargo del contacto:").trim();
-                String elTelefonoContacto = JOptionPane.showInputDialog("Teléfono del contacto:").trim();
-                String elCorreoContacto = JOptionPane.showInputDialog("Correo electrónico del contacto:").trim();
+                String elNombreContacto = leer("Nombre completo del contacto:");
+                String elCargo = leer("Cargo del contacto:");
+                String elTelefonoContacto = leer("Teléfono del contacto:");
+                String elCorreoContacto = leer("Correo electrónico del contacto:");
                 Contacto elContacto = new Contacto(elNombreContacto, elCargo, elTelefonoContacto, elCorreoContacto);
-                elCliente = new Empresa(elNumIdeCliente, elNombreCliente, laCiudad, elContacto);
+                // Orden de parámetros según el modelo: (contacto, identificación, nombre, ciudad)
+                elCliente = new Empresa(elContacto, elNumIdeCliente, elNombreCliente, laCiudad);
             } else {
-                String elTelefono = JOptionPane.showInputDialog("Teléfono del cliente:").trim();
-                String elCorreo = JOptionPane.showInputDialog("Correo electrónico del cliente:").trim();
-                elCliente = new PersonaNatural(elNumIdeCliente, elNombreCliente, laCiudad, elTelefono, elCorreo);
+                String elTelefono = leer("Teléfono del cliente:");
+                String elCorreo = leer("Correo electrónico del cliente:");
+                // Orden de parámetros según el modelo: (teléfono, correo, identificación, nombre, ciudad)
+                elCliente = new PersonaNatural(elTelefono, elCorreo, elNumIdeCliente, elNombreCliente, laCiudad);
             }
         }
 
@@ -203,10 +681,11 @@ public class UsaProyecto extends javax.swing.JFrame {
         }
 
         // gerente (el equipo se puede registrar después)
-        JOptionPane.showMessageDialog(null, "A continuación, los datos del gerente del proyecto");
+        JOptionPane.showMessageDialog(this, "A continuación, los datos del gerente del proyecto");
         Empleado elGerente = solicitarEmpleado();
 
-        Proyecto elProyecto = new Proyecto(elCodigo, elTitulo, laFechaInicio, laUnidad, laDuracion, elCliente, elGerente);
+        // Constructor sin equipo; el estado por defecto es INICIADO
+        Proyecto elProyecto = new Proyecto(elCodigo, elTitulo, laFechaInicio, laUnidad, laDuracion, elCliente, elGerente, "INICIADO");
         datos.add(elProyecto);
         return datos;
     }
@@ -218,9 +697,9 @@ public class UsaProyecto extends javax.swing.JFrame {
         if (datos.isEmpty()) {
             res = "No hay proyectos registrados.";
         } else {
-            res = "Los proyectos registrados son:\n";
+            res = "Los proyectos registrados son:\n\n";
             for (Proyecto p : datos) {
-                res += p.toString() + " FechaFinalizacion: " + p.determinarFechaFinalizacion() + "\n";
+                res += p.toString() + " FechaFinalizacion: " + p.determinarFechaFinalizacion() + "\n\n";
             }
         }
         return res;
@@ -233,7 +712,7 @@ public class UsaProyecto extends javax.swing.JFrame {
         } else {
             for (Proyecto p : datos) {
                 if (p.getEstado().equals("EN CURSO")) {
-                    res += p.toString() + " FechaFinalizacion: " + p.determinarFechaFinalizacion() + "\n";
+                    res += p.toString() + " FechaFinalizacion: " + p.determinarFechaFinalizacion() + "\n\n";
                 }
             }
             if (res.isEmpty()) {
@@ -326,87 +805,13 @@ public class UsaProyecto extends javax.swing.JFrame {
     }
 
     public String consultarProyectosDadoNumIDEGerente(ArrayList<Proyecto> datos, String numIDEGerente) {
-        String res = "";/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
-
-
-/**
- *
- * @author jp
- */
-
-    
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(UsaProyecto.class.getName());
-
-    /**
-     * Creates new form UsaProyecto
-     */
-    public UsaProyecto() {
-        initComponents();
-    }
-
-    /**
-     * This method is called from within the constructor to initialize the form.
-     * WARNING: Do NOT modify this code. The content of this method is always
-     * regenerated by the Form Editor.
-     */
-    @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
-    private void initComponents() {
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
-
-        pack();
-    }// </editor-fold>                        
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ReflectiveOperationException | javax.swing.UnsupportedLookAndFeelException ex) {
-            logger.log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new UsaProyecto().setVisible(true));
-    }
-
-    // Variables declaration - do not modify                     
-    // End of variables declaration                   
-}
-
+        String res = "";
         if (datos.isEmpty()) {
             res = "No hay proyectos registrados.";
         } else {
             for (Proyecto p : datos) {
                 if (p.getSuGerente().getNumeroIdentificacion().equals(numIDEGerente)) {
-                    res += p.toString() + " FechaFinalizacion: " + p.determinarFechaFinalizacion() + "\n";
+                    res += p.toString() + " FechaFinalizacion: " + p.determinarFechaFinalizacion() + "\n\n";
                 }
             }
             if (res.isEmpty()) {
@@ -423,7 +828,7 @@ public class UsaProyecto extends javax.swing.JFrame {
         } else {
             for (Proyecto p : datos) {
                 if (p.getSuCliente().getNumeroIdentificacion().equals(numIDECliente)) {
-                    res += p.toString() + " FechaFinalizacion: " + p.determinarFechaFinalizacion() + "\n";
+                    res += p.toString() + " FechaFinalizacion: " + p.determinarFechaFinalizacion() + "\n\n";
                 }
             }
             if (res.isEmpty()) {
@@ -442,7 +847,7 @@ public class UsaProyecto extends javax.swing.JFrame {
                 boolean cumple = (tipoCliente.equalsIgnoreCase("Empresa") && p.getSuCliente() instanceof Empresa)
                         || (tipoCliente.equalsIgnoreCase("PersonaNatural") && p.getSuCliente() instanceof PersonaNatural);
                 if (cumple) {
-                    res += p.toString() + " FechaFinalizacion: " + p.determinarFechaFinalizacion() + "\n";
+                    res += p.toString() + " FechaFinalizacion: " + p.determinarFechaFinalizacion() + "\n\n";
                 }
             }
             if (res.isEmpty()) {
@@ -489,7 +894,7 @@ public class UsaProyecto extends javax.swing.JFrame {
                     int cantidad = 0;
                     do {
                         try {
-                            cantidad = Integer.parseInt(JOptionPane.showInputDialog("Cantidad de integrantes a registrar (mínimo 1):").trim());
+                            cantidad = Integer.parseInt(leer("Cantidad de integrantes a registrar (mínimo 1):"));
                         } catch (NumberFormatException e) {
                             cantidad = 0;
                         }
@@ -497,7 +902,7 @@ public class UsaProyecto extends javax.swing.JFrame {
 
                     ArrayList<Empleado> elEquipo = new ArrayList<>();
                     for (int k = 1; k <= cantidad; k++) {
-                        JOptionPane.showMessageDialog(null, "Integrante " + k + " de " + cantidad);
+                        JOptionPane.showMessageDialog(this, "Integrante " + k + " de " + cantidad);
                         elEquipo.add(solicitarEmpleado());
                     }
                     p.setSuEquipo(elEquipo);
@@ -515,7 +920,7 @@ public class UsaProyecto extends javax.swing.JFrame {
         if (datos.isEmpty()) {
             res = "No hay proyectos registrados.";
         } else {
-            String elNumIde = JOptionPane.showInputDialog("Número de identificación del integrante a eliminar:").trim();
+            String elNumIde = leer("Número de identificación del integrante a eliminar:");
             res = "No existe un proyecto con el código " + codigoProyecto;
             int i = 0;
             boolean encontrado = false;
@@ -547,9 +952,8 @@ public class UsaProyecto extends javax.swing.JFrame {
                 if (datos.get(i).getCodigo().equals(codigoProyecto)) {
                     String elEstado;
                     do {
-                        elEstado = JOptionPane.showInputDialog(
-                                "Nuevo estado (INICIADO, EN CURSO, CANCELADO, FINALIZADO, SUSPENDIDO, APLAZADO):")
-                                .trim().toUpperCase();
+                        elEstado = leer("Nuevo estado (INICIADO, EN CURSO, CANCELADO, FINALIZADO, SUSPENDIDO, APLAZADO):")
+                                .toUpperCase();
                     } while (!elEstado.equals("INICIADO") && !elEstado.equals("EN CURSO")
                             && !elEstado.equals("CANCELADO") && !elEstado.equals("FINALIZADO")
                             && !elEstado.equals("SUSPENDIDO") && !elEstado.equals("APLAZADO"));
@@ -573,18 +977,20 @@ public class UsaProyecto extends javax.swing.JFrame {
                 for (Proyecto p : datos) {
                     salida.writeObject(p);
                 }
-                JOptionPane.showMessageDialog(null, "Archivo datosProyectos generado: " + datos.size() + " proyecto(s)");
+                JOptionPane.showMessageDialog(this, "Archivo datosProyectos generado: " + datos.size() + " proyecto(s)");
             } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "Error almacenando los proyectos: " + e.getMessage());
+                JOptionPane.showMessageDialog(this, "Error almacenando los proyectos: " + e.getMessage());
             } finally {
                 try {
-                    salida.close();
+                    if (salida != null) {
+                        salida.close();
+                    }
                 } catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, "Error cerrando el archivo");
+                    JOptionPane.showMessageDialog(this, "Error cerrando el archivo");
                 }
             }
         } else {
-            JOptionPane.showMessageDialog(null, "No hay proyectos para almacenar: la lista está vacía.");
+            JOptionPane.showMessageDialog(this, "No hay proyectos para almacenar: la lista está vacía.");
         }
     }
 
@@ -602,12 +1008,14 @@ public class UsaProyecto extends javax.swing.JFrame {
                 }
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Error recuperando los proyectos: " + e.getMessage());
+            JOptionPane.showMessageDialog(this, "Error recuperando los proyectos: " + e.getMessage());
         } finally {
             try {
-                entrada.close();
+                if (entrada != null) {
+                    entrada.close();
+                }
             } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "Error cerrando el archivo");
+                JOptionPane.showMessageDialog(this, "Error cerrando el archivo");
             }
         }
         return datos;
@@ -621,18 +1029,20 @@ public class UsaProyecto extends javax.swing.JFrame {
                 for (Proyecto p : datos) {
                     salida.writeObject(p.getSuCliente());
                 }
-                JOptionPane.showMessageDialog(null, "Archivo datosClientes generado");
+                JOptionPane.showMessageDialog(this, "Archivo datosClientes generado");
             } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "Error almacenando los clientes: " + e.getMessage());
+                JOptionPane.showMessageDialog(this, "Error almacenando los clientes: " + e.getMessage());
             } finally {
                 try {
-                    salida.close();
+                    if (salida != null) {
+                        salida.close();
+                    }
                 } catch (Exception e) {
-                    JOptionPane.showMessageDialog(null, "Error cerrando el archivo");
+                    JOptionPane.showMessageDialog(this, "Error cerrando el archivo");
                 }
             }
         } else {
-            JOptionPane.showMessageDialog(null, "No hay proyectos, por lo tanto no hay clientes para almacenar.");
+            JOptionPane.showMessageDialog(this, "No hay proyectos, por lo tanto no hay clientes para almacenar.");
         }
     }
 
@@ -660,16 +1070,48 @@ public class UsaProyecto extends javax.swing.JFrame {
                 }
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Error recuperando los clientes: " + e.getMessage());
+            JOptionPane.showMessageDialog(this, "Error recuperando los clientes: " + e.getMessage());
         } finally {
             try {
-                entrada.close();
+                if (entrada != null) {
+                    entrada.close();
+                }
             } catch (Exception e) {
-                JOptionPane.showMessageDialog(null, "Error cerrando el archivo");
+                JOptionPane.showMessageDialog(this, "Error cerrando el archivo");
             }
         }
         return datos;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonActualizarEstado;
+    private javax.swing.JButton jButtonConsultaCodigo;
+    private javax.swing.JButton jButtonConsultaEnCurso;
+    private javax.swing.JButton jButtonConsultaEquipo;
+    private javax.swing.JButton jButtonConsultaGerente;
+    private javax.swing.JButton jButtonConsultaPRIMERO;
+    private javax.swing.JButton jButtonConsultaPorCliente;
+    private javax.swing.JButton jButtonConsultaPorGerente;
+    private javax.swing.JButton jButtonConsultaTODO;
+    private javax.swing.JButton jButtonConsultaTipoCliente;
+    private javax.swing.JButton jButtonConsultaULTIMO;
+    private javax.swing.JButton jButtonEliminarIntegrante;
+    private javax.swing.JButton jButtonGenerarClientes;
+    private javax.swing.JButton jButtonGenerarProyectos;
+    private javax.swing.JButton jButtonLeerClientes;
+    private javax.swing.JButton jButtonLeerProyectos;
+    private javax.swing.JButton jButtonRegistrarEquipo;
+    private javax.swing.JButton jButtonRegistrarIntegrante;
+    private javax.swing.JButton jButtonRegistrarProyecto;
+    private javax.swing.JButton jButtonSalir;
+    private javax.swing.JLabel jLabelArchivos;
+    private javax.swing.JLabel jLabelConsultas;
+    private javax.swing.JLabel jLabelRegistro;
+    private javax.swing.JPanel jPanelArchivos;
+    private javax.swing.JPanel jPanelBotonesConsulta;
+    private javax.swing.JPanel jPanelConsultas;
+    private javax.swing.JPanel jPanelRegistro;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea txtResultado;
     // End of variables declaration//GEN-END:variables
+}

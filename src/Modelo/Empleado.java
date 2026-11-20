@@ -64,7 +64,7 @@ public class Empleado {
     }
     
     
-}
+
     public String getNumeroIdentificacion() {
         String numeroIdentificacion= " ";
         
