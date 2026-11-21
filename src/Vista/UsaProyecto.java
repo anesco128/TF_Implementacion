@@ -123,33 +123,33 @@ public class UsaProyecto extends javax.swing.JFrame {
         jPanelRegistro.setLayout(jPanelRegistroLayout);
         jPanelRegistroLayout.setHorizontalGroup(
             jPanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelRegistroLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelRegistro)
-                    .addComponent(jButtonRegistrarProyecto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonActualizarEstado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonRegistrarIntegrante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonRegistrarEquipo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonEliminarIntegrante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addGroup(jPanelRegistroLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabelRegistro)
+                        .addComponent(jButtonRegistrarProyecto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonActualizarEstado, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonRegistrarIntegrante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonRegistrarEquipo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonEliminarIntegrante, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addContainerGap())
         );
         jPanelRegistroLayout.setVerticalGroup(
             jPanelRegistroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelRegistroLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelRegistro)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonRegistrarProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonActualizarEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonRegistrarIntegrante, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonRegistrarEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonEliminarIntegrante, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanelRegistroLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabelRegistro)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jButtonRegistrarProyecto, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jButtonActualizarEstado, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jButtonRegistrarIntegrante, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jButtonRegistrarEquipo, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jButtonEliminarIntegrante, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanelArchivos.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -177,30 +177,30 @@ public class UsaProyecto extends javax.swing.JFrame {
         jPanelArchivos.setLayout(jPanelArchivosLayout);
         jPanelArchivosLayout.setHorizontalGroup(
             jPanelArchivosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelArchivosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelArchivosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelArchivos)
-                    .addComponent(jButtonGenerarProyectos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonGenerarClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonLeerProyectos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonLeerClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
+                .addGroup(jPanelArchivosLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanelArchivosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabelArchivos)
+                        .addComponent(jButtonGenerarProyectos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonGenerarClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonLeerProyectos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonLeerClientes, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addContainerGap())
         );
         jPanelArchivosLayout.setVerticalGroup(
             jPanelArchivosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelArchivosLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelArchivos)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonGenerarProyectos, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonGenerarClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonLeerProyectos, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonLeerClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanelArchivosLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabelArchivos)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jButtonGenerarProyectos, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jButtonGenerarClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jButtonLeerProyectos, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jButtonLeerClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanelConsultas.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -214,60 +214,52 @@ public class UsaProyecto extends javax.swing.JFrame {
         jButtonConsultaTODO.setText("Todos");
         jButtonConsultaTODO.setToolTipText("2. Consultar todos los proyectos");
         jButtonConsultaTODO.addActionListener(this::jButtonConsultaTODOActionPerformed);
-        jPanelBotonesConsulta.add(jButtonConsultaTODO);
-
         jButtonConsultaEnCurso.setBackground(new java.awt.Color(153, 204, 255));
         jButtonConsultaEnCurso.setText("En curso");
         jButtonConsultaEnCurso.setToolTipText("3. Consultar los proyectos en curso");
         jButtonConsultaEnCurso.addActionListener(this::jButtonConsultaEnCursoActionPerformed);
-        jPanelBotonesConsulta.add(jButtonConsultaEnCurso);
-
         jButtonConsultaPRIMERO.setBackground(new java.awt.Color(0, 204, 204));
         jButtonConsultaPRIMERO.setText("Primero");
         jButtonConsultaPRIMERO.setToolTipText("4. Consultar el primer proyecto registrado");
         jButtonConsultaPRIMERO.addActionListener(this::jButtonConsultaPRIMEROActionPerformed);
-        jPanelBotonesConsulta.add(jButtonConsultaPRIMERO);
-
         jButtonConsultaULTIMO.setBackground(new java.awt.Color(0, 204, 204));
         jButtonConsultaULTIMO.setText("Último");
         jButtonConsultaULTIMO.setToolTipText("5. Consultar el último proyecto registrado");
         jButtonConsultaULTIMO.addActionListener(this::jButtonConsultaULTIMOActionPerformed);
-        jPanelBotonesConsulta.add(jButtonConsultaULTIMO);
-
         jButtonConsultaCodigo.setBackground(new java.awt.Color(204, 255, 255));
         jButtonConsultaCodigo.setText("Por código");
         jButtonConsultaCodigo.setToolTipText("19. Consultar un proyecto por código");
         jButtonConsultaCodigo.addActionListener(this::jButtonConsultaCodigoActionPerformed);
-        jPanelBotonesConsulta.add(jButtonConsultaCodigo);
-
         jButtonConsultaGerente.setBackground(new java.awt.Color(204, 255, 255));
         jButtonConsultaGerente.setText("Gerente del proyecto");
         jButtonConsultaGerente.setToolTipText("6. Consultar el gerente de un proyecto");
         jButtonConsultaGerente.addActionListener(this::jButtonConsultaGerenteActionPerformed);
-        jPanelBotonesConsulta.add(jButtonConsultaGerente);
-
         jButtonConsultaEquipo.setBackground(new java.awt.Color(204, 255, 255));
         jButtonConsultaEquipo.setText("Equipo del proyecto");
         jButtonConsultaEquipo.setToolTipText("7. Consultar el equipo de un proyecto");
         jButtonConsultaEquipo.addActionListener(this::jButtonConsultaEquipoActionPerformed);
-        jPanelBotonesConsulta.add(jButtonConsultaEquipo);
-
         jButtonConsultaPorGerente.setBackground(new java.awt.Color(204, 255, 255));
         jButtonConsultaPorGerente.setText("Por gerente");
         jButtonConsultaPorGerente.setToolTipText("8. Consultar los proyectos de un gerente");
         jButtonConsultaPorGerente.addActionListener(this::jButtonConsultaPorGerenteActionPerformed);
-        jPanelBotonesConsulta.add(jButtonConsultaPorGerente);
-
         jButtonConsultaPorCliente.setBackground(new java.awt.Color(204, 255, 255));
         jButtonConsultaPorCliente.setText("Por cliente");
         jButtonConsultaPorCliente.setToolTipText("9. Consultar los proyectos de un cliente");
         jButtonConsultaPorCliente.addActionListener(this::jButtonConsultaPorClienteActionPerformed);
-        jPanelBotonesConsulta.add(jButtonConsultaPorCliente);
-
         jButtonConsultaTipoCliente.setBackground(new java.awt.Color(204, 255, 255));
         jButtonConsultaTipoCliente.setText("Por tipo de cliente");
         jButtonConsultaTipoCliente.setToolTipText("18. Consultar los proyectos por tipo de cliente");
         jButtonConsultaTipoCliente.addActionListener(this::jButtonConsultaTipoClienteActionPerformed);
+
+        jPanelBotonesConsulta.add(jButtonConsultaTODO);
+        jPanelBotonesConsulta.add(jButtonConsultaEnCurso);
+        jPanelBotonesConsulta.add(jButtonConsultaPRIMERO);
+        jPanelBotonesConsulta.add(jButtonConsultaULTIMO);
+        jPanelBotonesConsulta.add(jButtonConsultaCodigo);
+        jPanelBotonesConsulta.add(jButtonConsultaGerente);
+        jPanelBotonesConsulta.add(jButtonConsultaEquipo);
+        jPanelBotonesConsulta.add(jButtonConsultaPorGerente);
+        jPanelBotonesConsulta.add(jButtonConsultaPorCliente);
         jPanelBotonesConsulta.add(jButtonConsultaTipoCliente);
 
         txtResultado.setEditable(false);
@@ -281,24 +273,24 @@ public class UsaProyecto extends javax.swing.JFrame {
         jPanelConsultas.setLayout(jPanelConsultasLayout);
         jPanelConsultasLayout.setHorizontalGroup(
             jPanelConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelConsultasLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanelConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelConsultas)
-                    .addComponent(jPanelBotonesConsulta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane1))
-                .addContainerGap())
+                .addGroup(jPanelConsultasLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(jPanelConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabelConsultas)
+                        .addComponent(jPanelBotonesConsulta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addContainerGap())
         );
         jPanelConsultasLayout.setVerticalGroup(
             jPanelConsultasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelConsultasLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabelConsultas)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanelBotonesConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1)
-                .addContainerGap())
+                .addGroup(jPanelConsultasLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jLabelConsultas)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jPanelBotonesConsulta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap())
         );
 
         jButtonSalir.setBackground(new java.awt.Color(255, 102, 102));
@@ -310,29 +302,29 @@ public class UsaProyecto extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jPanelRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanelArchivos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(jPanelConsultas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButtonSalir, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addContainerGap())
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(jPanelRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGap(18, 18, 18)
+                            .addComponent(jPanelArchivos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jPanelConsultas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonSalir, javax.swing.GroupLayout.Alignment.TRAILING))
+                    .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanelRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanelArchivos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanelConsultas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButtonSalir)
-                .addContainerGap())
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jPanelRegistro, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanelArchivos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                    .addComponent(jPanelConsultas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(jButtonSalir)
+                    .addContainerGap())
         );
 
         pack();
@@ -392,14 +384,23 @@ public class UsaProyecto extends javax.swing.JFrame {
                     generarArchivoDeObjetosClientes(losProyectos);
                     break;
                 case 15:
-                    losProyectos = leerArchivoDeObjetosProyectos();
-                    res = consultarTodosProyectos(losProyectos);
+                    ArrayList<Proyecto> losLeidos = leerArchivoDeObjetosProyectos();
+                    if (losLeidos == null) {
+                        // no se pudo leer: se conservan los proyectos que ya estaban en memoria
+                        res = "No se pudo leer el archivo. Los proyectos registrados no se modificaron.";
+                    } else {
+                        losProyectos = losLeidos;
+                        res = consultarTodosProyectos(losProyectos);
+                    }
                     break;
                 case 16:
-                    losClientes = leerArchivoDeObjetosClientes();
-                    if (losClientes.isEmpty()) {
+                    ArrayList<Cliente> losClientesLeidos = leerArchivoDeObjetosClientes();
+                    if (losClientesLeidos == null) {
+                        res = "No se pudo leer el archivo. Los clientes registrados no se modificaron.";
+                    } else if (losClientesLeidos.isEmpty()) {
                         res = "No se leyeron clientes.";
                     } else {
+                        losClientes = losClientesLeidos;
                         res = "Los clientes leídos del archivo son:\n";
                         for (Cliente c : losClientes) {
                             res += c.toString() + "\n";
@@ -994,6 +995,7 @@ public class UsaProyecto extends javax.swing.JFrame {
         }
     }
 
+    /** Devuelve la lista leída, o null si el archivo no existe o no se pudo leer. */
     public ArrayList<Proyecto> leerArchivoDeObjetosProyectos() {
         ArrayList<Proyecto> datos = new ArrayList<>();
         ObjectInputStream entrada = null;
@@ -1008,7 +1010,9 @@ public class UsaProyecto extends javax.swing.JFrame {
                 }
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error recuperando los proyectos: " + e.getMessage());
+            JOptionPane.showMessageDialog(this, "Error recuperando los proyectos: " + e.getMessage()
+                    + "\nPrimero debe generar el archivo de proyectos (si ya existe de una versión anterior, bórrelo y vuelva a generarlo).");
+            datos = null;
         } finally {
             try {
                 if (entrada != null) {
@@ -1046,6 +1050,7 @@ public class UsaProyecto extends javax.swing.JFrame {
         }
     }
 
+    /** Devuelve la lista leída, o null si el archivo no existe o no se pudo leer. */
     public ArrayList<Cliente> leerArchivoDeObjetosClientes() {
         ArrayList<Cliente> datos = new ArrayList<>();
         ObjectInputStream entrada = null;
@@ -1070,7 +1075,9 @@ public class UsaProyecto extends javax.swing.JFrame {
                 }
             }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(this, "Error recuperando los clientes: " + e.getMessage());
+            JOptionPane.showMessageDialog(this, "Error recuperando los clientes: " + e.getMessage()
+                    + "\nPrimero debe generar el archivo de clientes (si ya existe de una versión anterior, bórrelo y vuelva a generarlo).");
+            datos = null;
         } finally {
             try {
                 if (entrada != null) {
@@ -1089,11 +1096,11 @@ public class UsaProyecto extends javax.swing.JFrame {
     private javax.swing.JButton jButtonConsultaEnCurso;
     private javax.swing.JButton jButtonConsultaEquipo;
     private javax.swing.JButton jButtonConsultaGerente;
-    private javax.swing.JButton jButtonConsultaPRIMERO;
     private javax.swing.JButton jButtonConsultaPorCliente;
     private javax.swing.JButton jButtonConsultaPorGerente;
-    private javax.swing.JButton jButtonConsultaTODO;
+    private javax.swing.JButton jButtonConsultaPRIMERO;
     private javax.swing.JButton jButtonConsultaTipoCliente;
+    private javax.swing.JButton jButtonConsultaTODO;
     private javax.swing.JButton jButtonConsultaULTIMO;
     private javax.swing.JButton jButtonEliminarIntegrante;
     private javax.swing.JButton jButtonGenerarClientes;
